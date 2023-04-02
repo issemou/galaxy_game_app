@@ -18,6 +18,7 @@ from kivy.uix.widget import Widget
 
 Builder.load_file("menu.kv")
 
+
 class MainWidget(RelativeLayout):
     from transforms import transform, transform_2D, transform_perspective
     from user_actions import on_keyboard_up, on_keyboard_down, keyboard_closed, on_touch_up, on_touch_down
@@ -100,7 +101,6 @@ class MainWidget(RelativeLayout):
         self.sound_restart.volume = .25
         self.sound_gameover_impact.volume = .6
 
-
     def reset_game(self):
         self.current_offset_y = 0
         self.current_y_loop = 0
@@ -131,8 +131,8 @@ class MainWidget(RelativeLayout):
         # ... self.transform
         #     2
         #  1     3
-        self.ship_coordinates[0] = (center_x-half_width, base_y)
-        self.ship_coordinates[1] = (center_x, base_y+ship_height)
+        self.ship_coordinates[0] = (center_x - half_width, base_y)
+        self.ship_coordinates[1] = (center_x, base_y + ship_height)
         self.ship_coordinates[2] = (center_x + half_width, base_y)
 
         x1, y1 = self.transform(*self.ship_coordinates[0])
@@ -151,13 +151,12 @@ class MainWidget(RelativeLayout):
 
     def check_ship_collision_with_tile(self, ti_x, ti_y):
         xmin, ymin = self.get_tile_coordinates(ti_x, ti_y)
-        xmax, ymax = self.get_tile_coordinates(ti_x+1, ti_y+1)
+        xmax, ymax = self.get_tile_coordinates(ti_x + 1, ti_y + 1)
         for i in range(0, 3):
             px, py = self.ship_coordinates[i]
             if xmin <= px <= xmax and ymin <= py <= ymax:
                 return True
         return False
-
 
     def init_tiles(self):
         with self.canvas:
@@ -175,14 +174,14 @@ class MainWidget(RelativeLayout):
 
         # supprimer les coordonnées sorties de l'écran
         # ti_y < self.current_y_loop
-        for i in range(len(self.tiles_coordinates)-1, -1, -1):
+        for i in range(len(self.tiles_coordinates) - 1, -1, -1):
             if self.tiles_coordinates[i][1] < self.current_y_loop:
                 del self.tiles_coordinates[i]
 
         if len(self.tiles_coordinates) > 0:
             last_coordinate = self.tiles_coordinates[-1]
             last_x = last_coordinate[0]
-            last_y = last_coordinate[1]+1
+            last_y = last_coordinate[1] + 1
 
         for i in range(len(self.tiles_coordinates), self.NB_TILES):
             r = random.randint(0, 2)
@@ -209,7 +208,6 @@ class MainWidget(RelativeLayout):
                 self.tiles_coordinates.append((last_x, last_y))
             last_y += 1
 
-
     def init_vertical_lines(self):
         with self.canvas:
             Color(1, 1, 1)
@@ -222,8 +220,8 @@ class MainWidget(RelativeLayout):
     def get_line_x_from_index(self, index):
         central_line_x = self.perspective_point_x
         spacing = self.V_LINES_SPACING * self.width
-        offset = index-0.5
-        line_x = central_line_x + offset*spacing + self.current_offset_x
+        offset = index - 0.5
+        line_x = central_line_x + offset * spacing + self.current_offset_x
         return line_x
 
     def get_line_y_from_index(self, index):
@@ -242,7 +240,7 @@ class MainWidget(RelativeLayout):
             tile = self.tiles[i]
             tile_coordinates = self.tiles_coordinates[i]
             xmin, ymin = self.get_tile_coordinates(tile_coordinates[0], tile_coordinates[1])
-            xmax, ymax = self.get_tile_coordinates(tile_coordinates[0]+1, tile_coordinates[1]+1)
+            xmax, ymax = self.get_tile_coordinates(tile_coordinates[0] + 1, tile_coordinates[1] + 1)
 
             #  2     3
             #
@@ -256,8 +254,8 @@ class MainWidget(RelativeLayout):
 
     def update_vertical_lines(self):
         # -1 0 1 2
-        start_index = -int(self.V_NB_LINES/2)+1
-        for i in range(start_index, start_index+self.V_NB_LINES):
+        start_index = -int(self.V_NB_LINES / 2) + 1
+        for i in range(start_index, start_index + self.V_NB_LINES):
             line_x = self.get_line_x_from_index(i)
             x1, y1 = self.transform(line_x, 0)
             x2, y2 = self.transform(line_x, self.height)
@@ -270,8 +268,8 @@ class MainWidget(RelativeLayout):
                 self.horizontal_lines.append(Line())
 
     def update_horizontal_lines(self):
-        start_index = -int(self.V_NB_LINES/2)+1
-        end_index = start_index + self.V_NB_LINES -1
+        start_index = -int(self.V_NB_LINES / 2) + 1
+        end_index = start_index + self.V_NB_LINES - 1
 
         xmin = self.get_line_x_from_index(start_index)
         xmax = self.get_line_x_from_index(end_index)
@@ -282,8 +280,8 @@ class MainWidget(RelativeLayout):
             self.horizontal_lines[i].points = [x1, y1, x2, y2]
 
     def update(self, dt):
-        #print("dt : " + str(dt*60))
-        time_factor = dt*60
+        # print("dt : " + str(dt*60))
+        time_factor = dt * 60
 
         self.update_vertical_lines()
         self.update_horizontal_lines()
@@ -330,12 +328,8 @@ class MainWidget(RelativeLayout):
         self.menu_widget.opacity = 0
 
 
-
 class GalaxyApp(App):
     pass
 
 
 GalaxyApp().run()
-
-
-
