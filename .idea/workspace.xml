@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8236b15a-ba47-498a-8a33-466a9bcb167d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/galaxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/galaxy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../WIB_projects/Python/SimpleHospitalMS-Python" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -75,6 +73,7 @@
       <updated>1674915554480</updated>
       <workItem from="1674915555669" duration="1226000" />
       <workItem from="1676820292270" duration="383000" />
+      <workItem from="1680470117156" duration="1008000" />
     </task>
     <servers />
   </component>
@@ -102,14 +101,19 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="392" y="0" key="#main/0.0.1366.720/1366.0.1024.720@0.0.1366.720" timestamp="1676820356621" />
+    <state x="463" y="115" key="FileChooserDialogImpl" timestamp="1680471143581">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="463" y="115" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1680471143581" />
     <state x="507" y="280" key="Github.CreateGistDialog" timestamp="1674923304214">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="507" y="280" key="Github.CreateGistDialog/0.0.1366.720/1366.0.1024.720@0.0.1366.720" timestamp="1674923304214" />
-    <state x="561" y="258" key="Github.ShareDialog" timestamp="1674923158639">
+    <state x="561" y="258" width="243" height="292" key="Github.ShareDialog" timestamp="1680470242828">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="561" y="258" key="Github.ShareDialog/0.0.1366.720/1366.0.1024.720@0.0.1366.720" timestamp="1674923158639" />
+    <state x="561" y="258" width="243" height="292" key="Github.ShareDialog/0.0.1366.720@0.0.1366.720" timestamp="1680470242828" />
     <state width="1322" height="176" key="GridCell.Tab.0.bottom" timestamp="1676820677618">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
@@ -126,10 +130,19 @@
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state width="1322" height="176" key="GridCell.Tab.0.right/0.0.1366.720/1366.0.1024.720@0.0.1366.720" timestamp="1676820677618" />
-    <state x="350" y="261" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1674915590625">
+    <state x="263" y="103" key="IDE.errors.dialog" timestamp="1680470868725">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="263" y="103" key="IDE.errors.dialog/0.0.1366.720@0.0.1366.720" timestamp="1680470868725" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1680470979200">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1680470979200" />
+    <state x="350" y="261" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1680470948167">
       <screen x="0" y="0" width="1366" height="720" />
     </state>
     <state x="350" y="261" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.720/1366.0.1024.720@0.0.1366.720" timestamp="1674915590625" />
+    <state x="350" y="261" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.720@0.0.1366.720" timestamp="1680470948167" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/galaxy$main.coverage" NAME="main Coverage Results" MODIFIED="1676820387080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
